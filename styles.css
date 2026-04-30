@@ -1014,11 +1014,11 @@ html { scroll-behavior:smooth; }
   .pyx-hero__logo { width: 30%; }
 }
 @media (max-width: 425px) {
-  .pyx-hero__logo { width: 50px; }
+  .pyx-hero__logo { width: 30%; }
 }
 @media (max-width: 375px) {
-  .pyx-hero__logo { width: 50px; }
+  .pyx-hero__logo { width: 30%; }
 }
 @media (max-width: 320px) {
-  .pyx-hero__logo { width: 50px; }
+  .pyx-hero__logo { width: 30%; }
 }
