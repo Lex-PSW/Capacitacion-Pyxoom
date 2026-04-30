@@ -206,7 +206,9 @@ html { scroll-behavior:smooth; }
   justify-content: space-between;
   padding: 28px 60px;
 }
-
+.psw__logo {
+  width: 8%;
+}
 .pyx-logo {
   display: flex;
   align-items: center;
