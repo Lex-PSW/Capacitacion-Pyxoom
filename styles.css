@@ -206,9 +206,7 @@ html { scroll-behavior:smooth; }
   justify-content: space-between;
   padding: 28px 60px;
 }
-.psw__logo {
-  width: 8%;
-}
+
 .pyx-logo {
   display: flex;
   align-items: center;
@@ -974,6 +972,9 @@ html { scroll-behavior:smooth; }
   justify-content: space-between;
   max-width: 100%;
 }
+.psw__logo {
+  width: 8%;
+}
 .pyx-footer__copy { font-size:13px; color:rgba(255,255,255,0.3); }
 .pyx-footer__links { display:flex; gap:24px; }
 .pyx-footer__links a { font-size:13px; color:rgba(255,255,255,0.3); text-decoration:none; transition:color 0.2s; }
@@ -1002,6 +1003,7 @@ html { scroll-behavior:smooth; }
   .pyx-timeline__line { display:none; }
   .pyx-footer { flex-direction:column; gap:16px; text-align:center; padding:32px 24px; }
   .pyx-hero__logo { width: 50%; }
+  .psw__logo { width: 8%; }
 }
 
 @media (max-width: 640px) {
@@ -1014,13 +1016,17 @@ html { scroll-behavior:smooth; }
   .pyx-tl-item__dot    { width:56px; height:56px; margin-bottom:0; flex-shrink:0; }
   .pyx-hero__headline  { font-size:36px; }
   .pyx-hero__logo { width: 50%; }
+  .psw__logo { width: 8%; }
 }
 @media (max-width: 425px) {
   .pyx-hero__logo { width: 60%; }
+  .psw__logo { width: 3%; }
 }
 @media (max-width: 375px) {
   .pyx-hero__logo { width: 60%; }
+  .psw__logo { width: 3%; }
 }
 @media (max-width: 320px) {
   .pyx-hero__logo { width: 60%; }
+  .psw__logo { width: 3%; }
 }
