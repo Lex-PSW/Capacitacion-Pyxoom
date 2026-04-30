@@ -999,6 +999,7 @@ html { scroll-behavior:smooth; }
   .pyx-timeline__items { grid-template-columns:repeat(2,1fr); }
   .pyx-timeline__line { display:none; }
   .pyx-footer { flex-direction:column; gap:16px; text-align:center; padding:32px 24px; }
+  .pyx-hero__logo { width: 30%; }
 }
 
 @media (max-width: 640px) {
@@ -1010,4 +1011,5 @@ html { scroll-behavior:smooth; }
   .pyx-tl-item         { flex-direction:row; text-align:left; gap:20px; }
   .pyx-tl-item__dot    { width:56px; height:56px; margin-bottom:0; flex-shrink:0; }
   .pyx-hero__headline  { font-size:36px; }
+  .pyx-hero__logo { width: 30%; }
 }
