@@ -9,10 +9,11 @@ const SESSIONS = {
   "4-12": { title:"Webinar Inaugural — Pyxoom 4.2.3",  time:"Lun 12 Mayo · 10:00 AM (CST)", link:"https://bit.ly/webinar_py" },
   "4-19": { title:"Sesión 2 — Módulos de Reclutamiento",time:"Lun 19 Mayo · 10:00 AM (CST)", link:"https://bit.ly/webinar_py" },
   "4-26": { title:"Sesión 3 — Flujos de Evaluación",    time:"Lun 26 Mayo · 10:00 AM (CST)", link:"https://bit.ly/webinar_py" },
-  "5-2":  { title:"Sesión 4 — Administración y Roles",  time:"Mar 2 Jun · 10:00 AM (CST)",   link:"https://bit.ly/webinar_py" },
-  "5-9":  { title:"Sesión 5 — Reporteo e Indicadores",  time:"Mar 9 Jun · 10:00 AM (CST)",   link:"https://bit.ly/webinar_py" },
-  "5-16": { title:"Sesión 6 — Integración y APIs",      time:"Mar 16 Jun · 10:00 AM (CST)",  link:"https://bit.ly/webinar_py" },
-  "5-23": { title:"Sesión 7 — Migración y Go-Live",     time:"Lun 23 Jun · 10:00 AM (CST)",  link:"https://bit.ly/webinar_py" },
+  "5-1":  { title:"Sesión 4 — Administración y Roles",  time:"Lun 1 Jun · 15:30 PM (CST)",   link:"https://events.teams.microsoft.com/event/69d9c7cf-e6f2-4cb1-8d67-3235f9d35f10@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
+  "5-8":  { title:"Sesión 5 — Reporteo e Indicadores",  time:"Lun 8 Jun · 15:30 PM (CST)",   link:"https://events.teams.microsoft.com/event/6b2cf06b-3655-4fc8-b465-473cbb035f0f@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
+  "5-15": { title:"Sesión 6 — Integración y APIs",      time:"Lun 15 Jun · 15:30 PM (CST)",  link:"https://events.teams.microsoft.com/event/98a80cc9-a2e3-4df5-8968-a68e0e7f6cac@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
+  "5-22": { title:"Sesión 7 — Migración y Go-Live",     time:"Lun 22 Jun · 15:30 PM (CST)",  link:"https://events.teams.microsoft.com/event/66864e6f-5c9c-44cf-8da9-65770d63bab5@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
+  "5-29": { title:"Sesión 8 — Cierre del Programa",     time:"Lun 29 Jun · 15:30 PM (CST)",  link:"https://events.teams.microsoft.com/event/a8ff9a53-3b82-4412-871b-9fd8de3ae095@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
 };
 
 const MONTHS = [
@@ -77,24 +78,21 @@ function buildWebinarCard() {
       <div class="pyx-webinar-card__meta">
         <div class="pyx-webinar-card__meta-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          <span><strong>Lunes 28 de Abril, 2026</strong></span>
+          <span><strong>Martes 12 de Mayo, 2026</strong></span>
         </div>
         <div class="pyx-webinar-card__meta-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          <span><strong>10:00 AM</strong> — 11:00 AM (Hora CST)</span>
+          <span><strong>10:00 AM</strong> — 10:30 AM (Hora CST)</span>
         </div>
         <div class="pyx-webinar-card__meta-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           <span>Abierto a todos los clientes</span>
         </div>
       </div>
-      <a href="https://bit.ly/webinar_py" target="_blank" class="pyx-btn pyx-btn--primary" style="width:100%;justify-content:center;">
+      <a href="https://tiuoe.share.hsforms.com/2E5K-PdjmQyWxJlBfpXA3DA" target="_blank" class="pyx-btn pyx-btn--primary" style="width:100%;justify-content:center;">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        Registrarme al webinar
+        Registrate a este webinar
       </a>
-      <p style="font-size:11px;color:rgba(255,255,255,0.35);margin-top:12px;text-align:center;">
-        bit.ly/webinar_py
-      </p>
     </div>`;
 }
 
