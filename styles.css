@@ -608,7 +608,7 @@ html { scroll-behavior:smooth; }
   width: 200px;
   font-size: 12px;
   line-height: 1.5;
-  pointer-events: none;
+  pointer-events: auto;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.2s, visibility 0.2s;
@@ -626,7 +626,8 @@ html { scroll-behavior:smooth; }
   border:6px solid transparent;
   border-top-color:#0F2347;
 }
-.pyx-cal-day--session:hover .pyx-tooltip { opacity:1; visibility:visible; }
+.pyx-cal-day--session:hover .pyx-tooltip,
+.pyx-cal-day--session .pyx-tooltip:hover { opacity:1; visibility:visible; }
 
 .pyx-tooltip__title { font-weight:700; color:var(--white); margin-bottom:4px; font-family:var(--font-head); font-size:13px; letter-spacing:0.02em; }
 .pyx-tooltip__date  { color:#93C5FD; margin-bottom:6px; }
