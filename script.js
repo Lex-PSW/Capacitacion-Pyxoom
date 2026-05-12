@@ -7,16 +7,16 @@
 const SESSIONS = {
   // mes (0-indexed), dia: {title, time, link}
   "4-12": { title:"Webinar Inaugural — Pyxoom 4.2.3", time:"Mar 12 Mayo · 10:00 AM - 10:30 AM (CST)", link:"https://tiuoe.share.hsforms.com/2E5K-PdjmQyWxJlBfpXA3DA" },
-  "4-11": { title:"Sesión 1 — Curso Pyxoom 4.2", time:"Lun 11 Mayo · 15:30 PM - 17:30 PM (CST)", link:"https://events.teams.microsoft.com/event/6d40fa90-4487-43c7-9cda-e8910e61bb84@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
+  "4-11": { title:"Sesión 1 — Curso Pyxoom 4.2", time:"Lun 11 Mayo · 15:30 PM - 17:00 PM (CST)", link:"https://events.teams.microsoft.com/event/6d40fa90-4487-43c7-9cda-e8910e61bb84@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
   "4-15": { title:"Webinar Sesión informativa: Proceso de Actualización de tu Pyxoom", time:"Vie 15 Mayo · 10:00 PM - 10:30 PM (CST)", link:"https://events.teams.microsoft.com/event/7a88a1a1-bfda-488f-9674-f257be1fcc56@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
-  "4-18": { title:"Sesión 2 — Curso Pyxoom 4.2", time:"Lun 18 Mayo · 15:30 PM - 17:30 PM (CST)", link:"https://events.teams.microsoft.com/event/26f81aed-13fb-43f9-88d2-09806cfffaa4@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
-  "4-25": { title:"Sesión 3 — Curso Pyxoom 4.2", time:"Lun 25 Mayo · 15:30 PM - 17:30 PM (CST)", link:"https://events.teams.microsoft.com/event/e2cb28d8-215f-4c1c-9f76-f916b593919a@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
-  "5-1":  { title:"Sesión 4 — Curso Pyxoom 4.2", time:"Lun 1 Jun · 15:30 PM - 17:30 PM (CST)",   link:"https://events.teams.microsoft.com/event/69d9c7cf-e6f2-4cb1-8d67-3235f9d35f10@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
-  "5-8":  { title:"Sesión 5 — Curso Pyxoom 4.2", time:"Lun 8 Jun · 15:30 PM - 17:30 PM (CST)",   link:"https://events.teams.microsoft.com/event/98a80cc9-a2e3-4df5-8968-a68e0e7f6cac@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
-  "5-15": { title:"Sesión 6 — Curso Pyxoom 4.2", time:"Lun 15 Jun · 15:30 PM - 17:30 PM (CST)",  link:"https://events.teams.microsoft.com/event/98a80cc9-a2e3-4df5-8968-a68e0e7f6cac@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
-  "5-22": { title:"Sesión 7 — Curso Pyxoom 4.2", time:"Lun 22 Jun · 15:30 PM - 17:30 PM (CST)",  link:"https://events.teams.microsoft.com/event/66864e6f-5c9c-44cf-8da9-65770d63bab5@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
+  "4-18": { title:"Sesión 2 — Curso Pyxoom 4.2", time:"Lun 18 Mayo · 15:30 PM - 17:00 PM (CST)", link:"https://events.teams.microsoft.com/event/26f81aed-13fb-43f9-88d2-09806cfffaa4@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
+  "4-25": { title:"Sesión 3 — Curso Pyxoom 4.2", time:"Lun 25 Mayo · 15:30 PM - 17:00 PM (CST)", link:"https://events.teams.microsoft.com/event/e2cb28d8-215f-4c1c-9f76-f916b593919a@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
+  "5-1":  { title:"Sesión 4 — Curso Pyxoom 4.2", time:"Lun 1 Jun · 15:30 PM - 17:00 PM (CST)",   link:"https://events.teams.microsoft.com/event/69d9c7cf-e6f2-4cb1-8d67-3235f9d35f10@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
+  "5-8":  { title:"Sesión 5 — Curso Pyxoom 4.2", time:"Lun 8 Jun · 15:30 PM - 17:00 PM (CST)",   link:"https://events.teams.microsoft.com/event/98a80cc9-a2e3-4df5-8968-a68e0e7f6cac@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
+  "5-15": { title:"Sesión 6 — Curso Pyxoom 4.2", time:"Lun 15 Jun · 15:30 PM - 17:00 PM (CST)",  link:"https://events.teams.microsoft.com/event/98a80cc9-a2e3-4df5-8968-a68e0e7f6cac@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
+  "5-22": { title:"Sesión 7 — Curso Pyxoom 4.2", time:"Lun 22 Jun · 15:30 PM - 17:00 PM (CST)",  link:"https://events.teams.microsoft.com/event/66864e6f-5c9c-44cf-8da9-65770d63bab5@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
   "5-25": { title:"Webinar Sesión informativa: Proceso de Actualización de tu Pyxoom", time:"Jue 25 Junio · 10:00 PM - 10:30 PM (CST)", link:"https://events.teams.microsoft.com/event/5259c034-cb57-4693-983c-0de2dbb1ed41@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
-  "5-29": { title:"Sesión 8 — Cierre del Programa", time:"Lun 29 Jun · 15:30 PM - 17:30 PM (CST)",  link:"https://events.teams.microsoft.com/event/a8ff9a53-3b82-4412-871b-9fd8de3ae095@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
+  "5-29": { title:"Sesión 8 — Cierre del Programa", time:"Lun 29 Jun · 15:30 PM - 17:00 PM (CST)",  link:"https://events.teams.microsoft.com/event/a8ff9a53-3b82-4412-871b-9fd8de3ae095@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
 };
 
 const MONTHS = [
