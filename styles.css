@@ -143,6 +143,8 @@
   --electric-lt:#00ccff;
   --white:      #FFFFFF;
   --off-white:  #F0F4FF;
+  --success:    #00C896;
+  --danger:     #FF4D6D;
   --muted:      rgba(255,255,255,0.55);
   --border:     rgba(255,255,255,0.10);
   --font-head:  'Poppins', sans-serif;
@@ -352,6 +354,11 @@ html { scroll-behavior:smooth; }
 .pyx-btn--outline:hover {
   border-color: rgba(255,255,255,0.7);
   background: rgba(255,255,255,0.05);
+}
+.pyx-btn--disabled {
+  opacity: 0.55;
+  pointer-events: none;
+  cursor: default;
 }
 
 .pyx-hero__image {
@@ -590,6 +597,12 @@ html { scroll-behavior:smooth; }
   z-index: 20;
 }
 
+.pyx-cal-day--past {
+  background: rgba(16, 200, 150, 0.12);
+  border: 1px solid rgba(16, 200, 150, 0.35);
+  color: var(--success);
+}
+
 .pyx-cal-day--today {
   border: 1px solid rgba(255,255,255,0.2);
   color: var(--white);
@@ -632,6 +645,8 @@ html { scroll-behavior:smooth; }
 .pyx-tooltip__title { font-weight:700; color:var(--white); margin-bottom:4px; font-family:var(--font-head); font-size:13px; letter-spacing:0.02em; }
 .pyx-tooltip__date  { color:#93C5FD; margin-bottom:6px; }
 .pyx-tooltip__link  { color:var(--electric-lt); text-decoration:underline; cursor:pointer; }
+.pyx-tooltip__link.pyx-btn { text-decoration: none; }
+.pyx-tooltip--past { background: rgba(10,18,44,0.95); border-color: rgba(255,255,255,0.15); }
 
 /* Webinar destacado */
 .pyx-webinar-card {
