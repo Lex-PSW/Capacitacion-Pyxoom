@@ -626,7 +626,7 @@ html { scroll-behavior:smooth; }
   pointer-events: auto;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.2s, visibility 0.2s;
+  transition: opacity 0.2s, visibility 0.2s, transform 0.2s;
   z-index: 100;
   box-shadow: 0 8px 32px rgba(0,0,0,0.4);
   white-space: normal;
@@ -641,8 +641,41 @@ html { scroll-behavior:smooth; }
   border:6px solid transparent;
   border-top-color:#0F2347;
 }
+
+/* Container for multiple tooltips stacked vertically */
+.pyx-tooltips {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 8px;
+  pointer-events: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+  z-index: 100;
+}
+.pyx-tooltips .pyx-tooltip {
+  position: relative;
+  bottom: auto;
+  left: auto;
+  transform: none;
+  width: 220px;
+}
+.pyx-tooltips .pyx-tooltip::after {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top-color: #0F2347;
+}
+
+/* show on hover */
 .pyx-cal-day--session:hover .pyx-tooltip,
-.pyx-cal-day--session .pyx-tooltip:hover { opacity:1; visibility:visible; }
+.pyx-cal-day--session .pyx-tooltip:hover,
+.pyx-cal-day--session:hover .pyx-tooltips,
+.pyx-cal-day--session .pyx-tooltips:hover { opacity:1; visibility:visible; }
 
 .pyx-tooltip__title { font-weight:700; color:var(--white); margin-bottom:4px; font-family:var(--font-head); font-size:13px; letter-spacing:0.02em; }
 .pyx-tooltip__date  { color:#93C5FD; margin-bottom:6px; }
