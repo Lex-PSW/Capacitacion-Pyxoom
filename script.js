@@ -100,12 +100,12 @@ function buildCalendar(cfg) {
 function buildWebinarCard() {
   return `
     <div class="pyx-webinar-card">
-      <div class="pyx-webinar-card__eyebrow">Sesión 9</div>
-      <div class="pyx-webinar-card__title">Curso Pyxoom 4.2</div>
+      <div class="pyx-webinar-card__eyebrow">Sesión 10</div>
+      <div class="pyx-webinar-card__title">Cierre del Programa</div>
       <div class="pyx-webinar-card__meta">
         <div class="pyx-webinar-card__meta-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          <span><strong>Jueves 25 de Junio, 2026</strong></span>
+          <span><strong>Martes 30 de Junio, 2026</strong></span>
         </div>
         <div class="pyx-webinar-card__meta-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
@@ -116,7 +116,7 @@ function buildWebinarCard() {
           <span>Abierto a todos los clientes</span>
         </div>
       </div>
-      <a href="https://events.teams.microsoft.com/event/fe04310a-68f4-4df0-b0f6-e3c591ba9ef2@4699fbe4-77a7-4846-ad70-9ce4e3841335" target="_blank" class="pyx-btn pyx-btn--primary" style="width:100%;justify-content:center;">
+      <a href="https://events.teams.microsoft.com/event/a8ff9a53-3b82-4412-871b-9fd8de3ae095@4699fbe4-77a7-4846-ad70-9ce4e3841335" target="_blank" class="pyx-btn pyx-btn--primary" style="width:100%;justify-content:center;">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         Registrate a este curso
       </a>
