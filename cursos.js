@@ -6,30 +6,36 @@
 // Datos de sesiones con tooltips
 const SESSIONS = {
   // mes (0-indexed), dia: {title, time, link}
-  "4-12": { title:"Webinar Inaugural — Pyxoom 4.2.3", time:"Mar 12 Mayo · 10:00 AM - 10:30 AM (CST)", link:"https://tiuoe.share.hsforms.com/2E5K-PdjmQyWxJlBfpXA3DA" },
-  "4-11": { title:"Sesión 1 — Curso Pyxoom 4.2", time:"Lun 11 Mayo · 15:30 PM - 17:00 PM (CST)", link:"https://events.teams.microsoft.com/event/6d40fa90-4487-43c7-9cda-e8910e61bb84@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
-  "4-15": { title:"Webinar Sesión informativa: Proceso de Actualización de tu Pyxoom", time:"Vie 15 Mayo · 10:00 AM - 10:30 AM (CST)", link:"https://events.teams.microsoft.com/event/7a88a1a1-bfda-488f-9674-f257be1fcc56@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
-  "4-18": { title:"Sesión 2 — Curso Pyxoom 4.2", time:"Lun 18 Mayo · 15:30 PM - 17:00 PM (CST)", link:"https://events.teams.microsoft.com/event/26f81aed-13fb-43f9-88d2-09806cfffaa4@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
-  "4-25": { title:"Sesión 3 — Curso Pyxoom 4.2", time:"Lun 25 Mayo · 15:30 PM - 17:00 PM (CST)", link:"https://events.teams.microsoft.com/event/e2cb28d8-215f-4c1c-9f76-f916b593919a@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
-  "5-1":  { title:"Sesión 4 — Curso Pyxoom 4.2", time:"Lun 1 Jun · 3:30 PM - 5:00 PM (CST)",   link:"https://events.teams.microsoft.com/event/69d9c7cf-e6f2-4cb1-8d67-3235f9d35f10@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
-  "5-12": { title:"Sesión 5 — Curso Pyxoom 4.2", time:"Vie 12 Jun · 9:30 AM - 11:00 AM (CST)",   link:"https://events.teams.microsoft.com/event/6b2cf06b-3655-4fc8-b465-473cbb035f0f@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
-  "5-15": { title:"Sesión 6 — Curso Pyxoom 4.2", time:"Lun 15 Jun · 3:30 PM - 5:00 PM (CST)",  link:"https://events.teams.microsoft.com/event/98a80cc9-a2e3-4df5-8968-a68e0e7f6cac@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
-  "5-18": { title:"Sesión 7 — Curso Pyxoom 4.2", time:"Jue 18 Jun · 3:30 PM - 5:00 PM (CST)", link:"https://events.teams.microsoft.com/event/8fdecd99-8235-4ab1-af4c-e817c0dcdacf@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
-  "5-22": { title:"Sesión 8 — Curso Pyxoom 4.2", time:"Lun 22 Jun · 3:30 PM - 5:00 PM (CST)",  link:"https://events.teams.microsoft.com/event/66864e6f-5c9c-44cf-8da9-65770d63bab5@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
-  "5-25": [
-    { title:"Sesión 9 — Curso Pyxoom 4.2", time:"Jue 25 Jun · 3:30 PM - 5:00 PM (CST)",  link:"https://events.teams.microsoft.com/event/fe04310a-68f4-4df0-b0f6-e3c591ba9ef2@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
-    { title:"Webinar Sesión informativa: Proceso de Actualización de tu Pyxoom", time:"Jue 25 Jun · 10:00 AM - 10:30 AM (CST)", link:"https://events.teams.microsoft.com/event/fe04310a-68f4-4df0-b0f6-e3c591ba9ef2@4699fbe4-77a7-4846-ad70-9ce4e3841335" }
+  "6-1":  { title:"Sesión 6 de Julio — Curso Pyxoom 4.2", time:"Lun 1 Jun · 3:30 PM - 5:00 PM (CST)",   link:"https://events.teams.microsoft.com/event/69d9c7cf-e6f2-4cb1-8d67-3235f9d35f10@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
+  "6-12": { title:"Sesión 6 de Julio — Curso Pyxoom 4.2", time:"Vie 12 Jun · 9:30 AM - 11:00 AM (CST)",   link:"https://events.teams.microsoft.com/event/6b2cf06b-3655-4fc8-b465-473cbb035f0f@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
+  "6-15": { title:"Sesión 6 de Julio — Curso Pyxoom 4.2", time:"Lun 15 Jun · 3:30 PM - 5:00 PM (CST)",  link:"https://events.teams.microsoft.com/event/98a80cc9-a2e3-4df5-8968-a68e0e7f6cac@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
+  "6-18": { title:"Sesión 6 de Julio — Curso Pyxoom 4.2", time:"Jue 18 Jun · 3:30 PM - 5:00 PM (CST)", link:"https://events.teams.microsoft.com/event/8fdecd99-8235-4ab1-af4c-e817c0dcdacf@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
+  "6-22": { title:"Sesión 6 de Julio — Curso Pyxoom 4.2", time:"Lun 22 Jun · 3:30 PM - 5:00 PM (CST)",  link:"https://events.teams.microsoft.com/event/66864e6f-5c9c-44cf-8da9-65770d63bab5@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
+  "6-25": [
+    { title:"Sesión 6 de Julio — Curso Pyxoom 4.2", time:"Jue 25 Jun · 3:30 PM - 5:00 PM (CST)",  link:"https://events.teams.microsoft.com/event/fe04310a-68f4-4df0-b0f6-e3c591ba9ef2@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
+    { title:"Sesión 6 de Julio — Webinar de actualización", time:"Jue 25 Jun · 10:00 AM - 10:30 AM (CST)", link:"https://events.teams.microsoft.com/event/fe04310a-68f4-4df0-b0f6-e3c591ba9ef2@4699fbe4-77a7-4846-ad70-9ce4e3841335" }
   ],
-  "5-30": { title:"Sesión 10 — Cierre del Programa", time:"Mar 30 Jun · 3:30 PM - 5:00 PM (CST)",  link:"https://events.teams.microsoft.com/event/a8ff9a53-3b82-4412-871b-9fd8de3ae095@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
+  "6-30": { title:"Sesión 6 de Julio — Cierre del Programa", time:"Mar 30 Jun · 3:30 PM - 5:00 PM (CST)",  link:"https://events.teams.microsoft.com/event/a8ff9a53-3b82-4412-871b-9fd8de3ae095@4699fbe4-77a7-4846-ad70-9ce4e3841335" },
 };
 
 const MONTHS = [  
-  { name:"Mayo",  year:2026, month:4 },
-  { name:"Junio", year:2026, month:5 },
   { name:"Julio", year:2026, month:6 },
+  { name:"Agosto", year:2026, month:7 },
 ];
 
 const DAY_NAMES = ["Do","Lu","Ma","Mi","Ju","Vi","Sá"];
+
+function getSessionForDate(month, day) {
+  const primaryKey = `${month}-${day}`;
+  if (SESSIONS[primaryKey]) return SESSIONS[primaryKey];
+  if (month === 6) return SESSIONS[`5-${day}`];
+  return null;
+}
+
+function monthHasSessions(month) {
+  if (month === 6) return true;
+  return Object.keys(SESSIONS).some(k => k.startsWith(`${month}-`));
+}
 
 function buildTooltip(session, isPast) {
   if (!session) return '';
@@ -62,8 +68,7 @@ function buildCalendar(cfg) {
   for(let i=0;i<firstDay;i++) daysHTML += `<div class="pyx-cal-day pyx-cal-day--empty"></div>`;
 
   for(let d=1;d<=daysInMonth;d++) {
-    const key = `${month}-${d}`;
-    const session = SESSIONS[key];
+      const session = getSessionForDate(month, d);
     const isToday = (today.getFullYear()===year && today.getMonth()===month && today.getDate()===d);
     const isPast = new Date(year, month, d) < today && !isToday;
     let cls = "pyx-cal-day";
@@ -83,7 +88,7 @@ function buildCalendar(cfg) {
     daysHTML += `<div class="${cls}">${d}${tooltip}</div>`;
   }
 
-  const hasSessions = Object.keys(SESSIONS).some(k => k.startsWith(`${month}-`));
+  const hasSessions = monthHasSessions(month);
 
   return `
     <div class="pyx-calendar">
@@ -100,7 +105,7 @@ function buildCalendar(cfg) {
 function buildWebinarCard() {
   return `
     <div class="pyx-webinar-card">
-      <div class="pyx-webinar-card__eyebrow">Sesión 10</div>
+      <div class="pyx-webinar-card__eyebrow">Sesión 6 de Julio</div>
       <div class="pyx-webinar-card__title">Cierre del Programa</div>
       <div class="pyx-webinar-card__meta">
         <div class="pyx-webinar-card__meta-item">
@@ -134,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const firstDay = new Date(year, month, 1).getDay();
     const daysInMonth = new Date(year, month+1, 0).getDate();
     const today = new Date();
-    const hasSessions = Object.keys(SESSIONS).some(k => k.startsWith(`${month}-`));
+    const hasSessions = monthHasSessions(month);
 
     let headerHTML = DAY_NAMES.map(d => `<div class="pyx-calendar__day-name">${d}</div>`).join('');
     let gridHTML = '';
@@ -142,8 +147,7 @@ document.addEventListener('DOMContentLoaded', function() {
     for(let i=0;i<firstDay;i++) gridHTML += `<div class="pyx-cal-day pyx-cal-day--empty"></div>`;
 
     for(let d=1;d<=daysInMonth;d++){
-      const key = `${month}-${d}`;
-      const session = SESSIONS[key];
+      const session = getSessionForDate(month, d);
       const isToday = (today.getFullYear()===year && today.getMonth()===month && today.getDate()===d);
       const isPast = new Date(year, month, d) < today && !isToday;
       let cls = "pyx-cal-day";

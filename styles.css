@@ -509,7 +509,7 @@ html { scroll-behavior:smooth; }
 
 .pyx-calendars-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 340px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
   align-items: start;
   margin-top: 48px;
@@ -739,6 +739,60 @@ html { scroll-behavior:smooth; }
 /* =============================================
    ③ FORMULARIO
    ============================================= */
+.pyx-step-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(280px, 1.05fr);
+  gap: 40px;
+  align-items: center;
+  width: 100%;
+  margin-top: 3rem;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: rgba(255,255,255,0.03);
+  box-shadow: var(--shadow);
+}
+.pyx-step-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.pyx-step-copy__title-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.pyx-step-copy__title {
+  margin-bottom: 16px;
+  text-align: left;
+  font-size: clamp(28px, 2.4vw, 36px);
+}
+.pyx-step-copy__text {
+  width: 100%;
+  max-width: 420px;
+  margin: 0;
+  text-align: left;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+.pyx-step-media {
+  display: flex;
+  justify-content: center;
+}
+.pyx-step-media img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+.pyx-step-grid--reverse {
+  grid-template-columns: minmax(280px, 1.05fr) minmax(0, 0.95fr);
+}
+.pyx-step-grid--reverse .pyx-step-copy { order: 2; }
+.pyx-step-grid--reverse .pyx-step-media { order: 1; }
+
 .pyx-form-section {
   background: var(--navy);
   padding: 90px 0;
@@ -934,6 +988,33 @@ html { scroll-behavior:smooth; }
   color: var(--electric-lt);
   margin-bottom: 8px;
 }
+
+.pyx-ordered-list {
+  margin: 20px 0 0;
+  padding-left: 1rem;
+  color: var(--white);
+}
+
+.pyx-ordered-list li {
+  margin-bottom: 12px;
+  line-height: 1.7;
+  color: var(--muted);
+  padding-left: 1rem;
+}
+
+.pyx-ordered-list a {
+  color: var(--electric-lt);
+  text-decoration: none;
+}
+
+.pyx-ordered-list a:hover {
+  color: var(--white);
+}
+
+.pyx-ordered-list li::marker {
+  color: var(--electric-lt);
+  font-weight: 700;
+}
 .pyx-tl-item__name {
   font-family: var(--font-head);
   font-weight: 700;
@@ -942,6 +1023,51 @@ html { scroll-behavior:smooth; }
   margin-bottom: 8px;
 }
 .pyx-tl-item__desc { font-size:13px; color:var(--muted); line-height:1.6; }
+
+.pyx-timeline--single-line .pyx-timeline__items {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 18px;
+}
+.pyx-timeline--single-line .pyx-timeline__line {
+  display: block;
+}
+.pyx-timeline--single-line .pyx-tl-item {
+  align-items: center;
+}
+.pyx-timeline--single-line .pyx-tl-item__desc {
+  max-width: 220px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1100px) {
+  .pyx-timeline--single-line .pyx-timeline__items {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .pyx-timeline--single-line .pyx-timeline__items {
+    grid-template-columns: 1fr;
+  }
+  .pyx-timeline--single-line .pyx-timeline__line {
+    display: none;
+  }
+  .pyx-timeline--single-line .pyx-tl-item {
+    flex-direction: row;
+    text-align: left;
+    gap: 20px;
+  }
+  .pyx-timeline--single-line .pyx-tl-item__dot {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+  .pyx-timeline--single-line .pyx-tl-item__desc {
+    margin: 0;
+    max-width: none;
+  }
+}
 
 /* =============================================
    ⑤ BENEFICIOS
@@ -958,6 +1084,75 @@ html { scroll-behavior:smooth; }
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   align-items: center;
+}
+
+.pyx-contact-wrap {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);
+  padding: 90px 0;
+}
+.pyx-contact-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: stretch;
+}
+
+.pyx-contact-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+.pyx-contact-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+  min-width: 0;
+}
+.pyx-contact-card {
+  padding: 24px;
+  border: 2px solid var(--electric-lt);
+  border-radius: var(--radius-lg);
+  background: rgba(255,255,255,0.03);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.pyx-contact-card__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--white);
+}
+.pyx-contact-card__desc {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+.pyx-contact-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pyx-contact-card__list li {
+  font-size: 14px;
+}
+.pyx-contact-card__list a {
+  color: var(--electric-lt);
+  text-decoration: none;
+  font-weight: 600;
+}
+.pyx-contact-card__list a:hover {
+  color: var(--white);
+  text-decoration: underline;
 }
 
 .pyx-benefits-pills {
@@ -1048,7 +1243,9 @@ html { scroll-behavior:smooth; }
   .pyx-stat-card--right { display:none; }
   .pyx-section      { padding: 60px 24px; }
   .pyx-form-inner   { grid-template-columns: 1fr; gap:40px; padding:0 24px; }
-  .pyx-benefits-inner { grid-template-columns:1fr; gap:40px; padding:0 24px; }
+  .pyx-benefits-inner { grid-template-columns: 1fr; gap:40px; padding:0 24px; }
+  .pyx-contact-inner { padding:0 24px; }
+  .pyx-contact-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pyx-timeline-inner { padding:0 24px; }
   .pyx-timeline__items { grid-template-columns:repeat(2,1fr); }
   .pyx-timeline__line { display:none; }
@@ -1058,7 +1255,22 @@ html { scroll-behavior:smooth; }
 }
 
 @media (max-width: 640px) {
+  .pyx-step-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 20px;
+  }
+  .pyx-step-copy__title-wrap {
+    justify-content: flex-start;
+  }
+  .pyx-step-copy__title {
+    text-align: left;
+  }
+  .pyx-step-copy__text {
+    max-width: none;
+  }
   .pyx-calendars-inner { padding:0 16px; }
+  .pyx-contact-cards { grid-template-columns: 1fr; }
   .pyx-calendars-grid  { grid-template-columns:1fr; overflow-x:auto; display:flex; gap:16px; padding-bottom:16px; scroll-snap-type:x mandatory; }
   .pyx-calendar        { min-width:280px; scroll-snap-align:start; }
   .pyx-webinar-card    { min-width:280px; scroll-snap-align:start; }
