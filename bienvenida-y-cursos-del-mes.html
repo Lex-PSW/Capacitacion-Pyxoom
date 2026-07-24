@@ -94,9 +94,9 @@
         </div>
       </div>
 
-      <div class="pyx-hero__image">
+      <div class="pyx-hero__image pyx-hero__image--featured">
         <div class="pyx-hero__image-glow"></div>
-          <img class="pyx-hero__photo" src="assets/img/hero-Kit.png" alt="Consultor de talento digital con interfaz de IA">
+          <img class="pyx-hero__photo pyx-hero__photo--large" src="assets/img/hero-Kit.png" alt="Consultor de talento digital con interfaz de IA">
         <!-- Placeholder visual mientras no hay foto: -->
         <!-- <div class="pyx-hero__photo-placeholder">
           <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"> 
@@ -105,11 +105,11 @@
           <p>Insertar foto<br>instructor / portavoz<br>(PNG fondo recortado)</p>
         </div> -->
 
-        <div class="pyx-stat-card pyx-stat-card--left">
+        <div class="pyx-stat-card pyx-stat-card--left pyx-stat-card--left-V2">
           <div class="pyx-stat-card__num">Cursos</div>
           <div class="pyx-stat-card__label">Todos los meses</div>
         </div>
-        <div class="pyx-stat-card pyx-stat-card--right">
+        <div class="pyx-stat-card pyx-stat-card--right pyx-stat-card--right-V2">
           <div class="pyx-stat-card__num">100%</div>
           <div class="pyx-stat-card__label">Gratis para clientes</div>
         </div>
@@ -139,7 +139,7 @@
           Somos un equipo multidisciplinario formado por Customer succes, Consultoría de Desarrollo Humano, Soporte y Comercial, y queremos ayudarte a lograr el éxito en la implementación de los productos y/o servicios de PSW.
         </p>
         <p class="pyx-section__desc" style="margin-top:14px;">
-          Nos da gusto ser parte de tu organización en el proceso de la Gestión del talento, tenemos la convicción de que sumando la tecnología, la innovación y las personas, se logran grandes cambios.
+          Nos da gusto ser parte de tu organización en el proceso de la Gestión del talento, tenemos la convicción de que sumando la <em style="color: var(--electric-lt);">tecnología</em>, la <em style="color: var(--electric-lt);">innovación</em> y las <em style="color: var(--electric-lt);">personas</em>, se logran grandes cambios.
         </p>
         <p class="pyx-section__desc" style="margin-top:14px;">
           A continuación te compartimos una serie de recomendaciones, sobre todo si es tu primera vez usando Pyxoom.
@@ -149,14 +149,14 @@
       <!-- Columna derecha: formulario -->
       <div class="pyx-hero__image">
         <div class="pyx-hero__image-glow"></div>
-          <img class="pyx-hero__photo" src="assets/img/hero-pixia.png" alt="Consultor de talento digital con interfaz de IA">
+          <img class="pyx-hero__photo pyxia__animation" src="assets/img/hero-pixia.png" alt="Consultor de talento digital con interfaz de IA">
 
         <div class="pyx-stat-card pyx-stat-card--left">
           <div class="pyx-stat-card__num">¡Hola!</div>
           <div class="pyx-stat-card__label">Mucho gusto en conocerte</div>
         </div>
         <div class="pyx-stat-card pyx-stat-card--right">
-          <div class="pyx-stat-card__num">Soy PixiIA</div>
+          <div class="pyx-stat-card__num">Soy PixIA</div>
           <div class="pyx-stat-card__label">Tu asistente de IA en Pyxoom</div>
         </div>
 <!--    <div class="pyx-stat-card pyx-stat-card--bottom">
@@ -177,91 +177,130 @@
         <div class="pyx-timeline__line"></div>
         <div class="pyx-timeline__items">
 
-          <div class="pyx-tl-item">
-            <div class="pyx-tl-item__dot">
-              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M35 8L34.5 7.5L40.5 13.5L40 13" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" fill="none"/>
-                <path d="M16 32L24.9233 29.0256L43.0257 10.9232C44.6684 9.28046 44.6684 6.6171 43.0257 4.97438C41.383 3.33167 38.7196 3.33167 37.0769 4.97437L18.9744 23.0767L16 32Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" fill="none"/>
-                <path d="M26 5H10C7.23858 5 5 7.23858 5 10V38C5 40.7614 7.23858 43 10 43H38C40.7614 43 43 40.7614 43 38V22" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" fill="none"/>
-              </svg>
-            </div>
-            <div>
-              <div class="pyx-tl-item__date">1.</div>
-              <div class="pyx-tl-item__name">Personalización de la empresa</div>
-              <p class="pyx-tl-item__desc">Edita los datos de la empresa, carga el logo y aviso de privacidad. También revisa las configuraciones de correo.</p>
-            </div>
+          <div class="pyx-tl-item pyx-tl-card">
+            <button class="pyx-tl-card__inner" type="button" aria-label="Ver detalles de Personalización de la empresa">
+              <div class="pyx-tl-card__face pyx-tl-card__face--front">
+                <div class="pyx-tl-item__dot">
+                  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M35 8L34.5 7.5L40.5 13.5L40 13" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" fill="none"/>
+                    <path d="M16 32L24.9233 29.0256L43.0257 10.9232C44.6684 9.28046 44.6684 6.6171 43.0257 4.97438C41.383 3.33167 38.7196 3.33167 37.0769 4.97437L18.9744 23.0767L16 32Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" fill="none"/>
+                    <path d="M26 5H10C7.23858 5 5 7.23858 5 10V38C5 40.7614 7.23858 43 10 43H38C40.7614 43 43 40.7614 43 38V22" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" fill="none"/>
+                  </svg>
+                </div>
+                <div class="pyx-tl-item__date">1.</div>
+                <div class="pyx-tl-item__name">Personalización de la empresa</div>
+              </div>
+              <div class="pyx-tl-card__face pyx-tl-card__face--back">
+                <div class="pyx-tl-item__name">Personalización de la empresa</div>
+                <p class="pyx-tl-item__desc">Edita los datos de la empresa, carga el logo y aviso de privacidad. También revisa las configuraciones de correo.</p>
+              </div>
+            </button>
           </div>
 
-          <div class="pyx-tl-item">
-            <div class="pyx-tl-item__dot">
-              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g fill="none" stroke-linejoin="miter" stroke-linecap="butt">
-                  <path d="M35.5409 27.4348C28.3402 25.5218 19.6598 25.5217 12.4591 27.4347C10.8727 27.8562 9.69168 29.1441 9.25352 30.7259L6.5 40.6667L8.54057 41.5218C18.4302 45.666 29.5697 45.666 39.4594 41.5218L41.5 40.6667L38.7465 30.726C38.3083 29.1441 37.1273 27.8563 35.5409 27.4348Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" fill="none"/>
-                  <path d="M30.5634 15.7049L31.3519 11.8252C32.2797 7.25963 28.7312 3 24 3C19.2688 3 15.7203 7.25964 16.6481 11.8252L17.4366 15.7049C18.0623 18.7838 20.8094 21 24 21C27.1906 21 29.9377 18.7838 30.5634 15.7049Z" stroke="currentColor" stroke-width="2" fill="none"/>
-                </g>
-              </svg>
-            </div>
-            <div>
-              <div class="pyx-tl-item__date">2.</div>
-              <div class="pyx-tl-item__name">Agregar Usuarios</div>
-              <p class="pyx-tl-item__desc">Agrega o edita los usuarios que tengas disponibles.</p>
-            </div>
+          <div class="pyx-tl-item pyx-tl-card">
+            <button class="pyx-tl-card__inner" type="button" aria-label="Ver detalles de Agregar Usuarios">
+              <div class="pyx-tl-card__face pyx-tl-card__face--front">
+                <div class="pyx-tl-item__dot">
+                  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" stroke-linejoin="miter" stroke-linecap="butt">
+                      <path d="M35.5409 27.4348C28.3402 25.5218 19.6598 25.5217 12.4591 27.4347C10.8727 27.8562 9.69168 29.1441 9.25352 30.7259L6.5 40.6667L8.54057 41.5218C18.4302 45.666 29.5697 45.666 39.4594 41.5218L41.5 40.6667L38.7465 30.726C38.3083 29.1441 37.1273 27.8563 35.5409 27.4348Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" fill="none"/>
+                      <path d="M30.5634 15.7049L31.3519 11.8252C32.2797 7.25963 28.7312 3 24 3C19.2688 3 15.7203 7.25964 16.6481 11.8252L17.4366 15.7049C18.0623 18.7838 20.8094 21 24 21C27.1906 21 29.9377 18.7838 30.5634 15.7049Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                    </g>
+                  </svg>
+                </div>
+                <div class="pyx-tl-item__date">2.</div>
+                <div class="pyx-tl-item__name">Agregar Usuarios</div>
+              </div>
+              <div class="pyx-tl-card__face pyx-tl-card__face--back">
+                <div class="pyx-tl-item__name">Agregar Usuarios</div>
+                <p class="pyx-tl-item__desc">Agrega o edita los usuarios que tengas disponibles.</p>
+              </div>
+            </button>
           </div>
 
-          <div class="pyx-tl-item">
-            <div class="pyx-tl-item__dot">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
-            </div>
-            <div>
-              <div class="pyx-tl-item__date">3.</div>
-              <div class="pyx-tl-item__name">Uso de Tracking</div>
-              <p class="pyx-tl-item__desc">En caso de usar Tracking, configura tus procesos automatizados para las diferentes vacantes.</p>
-            </div>
+          <div class="pyx-tl-item pyx-tl-card">
+            <button class="pyx-tl-card__inner" type="button" aria-label="Ver detalles de Uso de Tracking">
+              <div class="pyx-tl-card__face pyx-tl-card__face--front">
+                <div class="pyx-tl-item__dot">
+                  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" stroke-linejoin="miter" stroke-linecap="butt">
+                      <path d="M14 13V35" stroke="currentColor" stroke-width="2" stroke-linecap="square" fill="none"/>
+                      <path d="M23 5H5V13H23V5Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" fill="none"/>
+                      <path d="M23 35H5V43H23V35Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" fill="none"/>
+                      <path d="M32.5 24L39 15L45.5 24L39 33L32.5 24Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" fill="none"/>
+                      <path d="M39 9V5H28" stroke="currentColor" stroke-width="2" stroke-linecap="square" fill="none"/>
+                      <path d="M39 39V43H28" stroke="currentColor" stroke-width="2" stroke-linecap="square" fill="none"/>
+                    </g>
+                  </svg>
+                </div>
+                <div class="pyx-tl-item__date">3.</div>
+                <div class="pyx-tl-item__name">Uso de Tracking</div>
+              </div>
+              <div class="pyx-tl-card__face pyx-tl-card__face--back">
+                <div class="pyx-tl-item__name">Uso de Tracking</div>
+                <p class="pyx-tl-item__desc">En caso de usar Tracking, configura tus procesos automatizados para las diferentes vacantes.</p>
+              </div>
+            </button>
           </div>
 
-          <div class="pyx-tl-item">
-            <div class="pyx-tl-item__dot">
-              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 10V36C3 38.7614 5.23858 41 8 41H40C42.7614 41 45 38.7614 45 36V16C45 13.2386 42.7614 11 40 11H27L19 5H8C5.23858 5 3 7.23858 3 10Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" fill="none"/>
-              </svg>
-            </div>
-            <div>
-              <div class="pyx-tl-item__date">4.</div>
-              <div class="pyx-tl-item__name">Creación de Carpetas</div>
-              <p class="pyx-tl-item__desc">En caso de solo usar Carpetas, créalas, por ejemplo, por año, mes, área, departamento o puesto.</p>
-            </div>
+          <div class="pyx-tl-item pyx-tl-card">
+            <button class="pyx-tl-card__inner" type="button" aria-label="Ver detalles de Creación de Carpetas">
+              <div class="pyx-tl-card__face pyx-tl-card__face--front">
+                <div class="pyx-tl-item__dot">
+                  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 10V36C3 38.7614 5.23858 41 8 41H40C42.7614 41 45 38.7614 45 36V16C45 13.2386 42.7614 11 40 11H27L19 5H8C5.23858 5 3 7.23858 3 10Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" fill="none"/>
+                  </svg>
+                </div>
+                <div class="pyx-tl-item__date">4.</div>
+                <div class="pyx-tl-item__name">Creación de Carpetas</div>
+              </div>
+              <div class="pyx-tl-card__face pyx-tl-card__face--back">
+                <div class="pyx-tl-item__name">Creación de Carpetas</div>
+                <p class="pyx-tl-item__desc">En caso de solo usar Carpetas, créalas, por ejemplo, por año, mes, área, departamento o puesto.</p>
+              </div>
+            </button>
           </div>
 
-          <div class="pyx-tl-item">
-            <div class="pyx-tl-item__dot">
-              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M17 5H10C7.23858 5 5 7.23858 5 10L5 17" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" fill="none"/>
-                <path d="M17 43H10C7.23858 43 5 40.7614 5 38L5 31" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" fill="none"/>
-                <path d="M43 17L43 10C43 7.23858 40.7614 5 38 5L31 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" fill="none"/>
-                <path d="M43 31L43 38C43 40.7614 40.7614 43 38 43L31 43" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" fill="none"/>
-                <path d="M20.2875 27.3462V28.8027C20.2875 29.1963 20.2197 29.5999 19.9445 29.8812C18.8541 30.9958 15.7643 32.2516 13.5002 33.0861C12.3055 33.5264 11.5 34.652 11.5 35.9252V37H36.5V35.9252C36.5 34.652 35.6945 33.5264 34.4998 33.0861C32.2357 32.2516 29.1459 30.9958 28.0555 29.8812C27.7803 29.5999 27.7125 29.1963 27.7125 28.8027V27.3462C29.1467 26.3678 30.1808 24.8323 30.4842 23.0186L31.2384 18.5114C31.9839 14.0559 28.5346 10 24 10C19.4654 10 16.0161 14.0559 16.7616 18.5114L17.5158 23.0186C17.8192 24.8323 18.8533 26.3678 20.2875 27.3462Z" stroke="currentColor" stroke-width="2" fill="none"/>
-              </svg>
-            </div>
-            <div>
-              <div class="pyx-tl-item__date">5.</div>
-              <div class="pyx-tl-item__name">Adaptación de Perfiles</div>
-              <p class="pyx-tl-item__desc">La plataforma cuenta con perfiles genéricos, te sugerimos adaptarlos o cargar nuevos perfiles.</p>
-            </div>
+          <div class="pyx-tl-item pyx-tl-card">
+            <button class="pyx-tl-card__inner" type="button" aria-label="Ver detalles de Adaptación de Perfiles">
+              <div class="pyx-tl-card__face pyx-tl-card__face--front">
+                <div class="pyx-tl-item__dot">
+                  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 5H10C7.23858 5 5 7.23858 5 10L5 17" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" fill="none"/>
+                    <path d="M17 43H10C7.23858 43 5 40.7614 5 38L5 31" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" fill="none"/>
+                    <path d="M43 17L43 10C43 7.23858 40.7614 5 38 5L31 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" fill="none"/>
+                    <path d="M43 31L43 38C43 40.7614 40.7614 43 38 43L31 43" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" fill="none"/>
+                    <path d="M20.2875 27.3462V28.8027C20.2875 29.1963 20.2197 29.5999 19.9445 29.8812C18.8541 30.9958 15.7643 32.2516 13.5002 33.0861C12.3055 33.5264 11.5 34.652 11.5 35.9252V37H36.5V35.9252C36.5 34.652 35.6945 33.5264 34.4998 33.0861C32.2357 32.2516 29.1459 30.9958 28.0555 29.8812C27.7803 29.5999 27.7125 29.1963 27.7125 28.8027V27.3462C29.1467 26.3678 30.1808 24.8323 30.4842 23.0186L31.2384 18.5114C31.9839 14.0559 28.5346 10 24 10C19.4654 10 16.0161 14.0559 16.7616 18.5114L17.5158 23.0186C17.8192 24.8323 18.8533 26.3678 20.2875 27.3462Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                  </svg>
+                </div>
+                <div class="pyx-tl-item__date">5.</div>
+                <div class="pyx-tl-item__name">Adaptación de Perfiles</div>
+              </div>
+              <div class="pyx-tl-card__face pyx-tl-card__face--back">
+                <div class="pyx-tl-item__name">Adaptación de Perfiles</div>
+                <p class="pyx-tl-item__desc">La plataforma cuenta con perfiles genéricos, te sugerimos adaptarlos o cargar nuevos perfiles.</p>
+              </div>
+            </button>
           </div>
 
-          <div class="pyx-tl-item">
-            <div class="pyx-tl-item__dot">
-              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g fill="none" stroke-linejoin="miter" stroke-linecap="butt">
-                  <path d="M5 23.95L15.2308 37L43 8" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" fill="none"/>
-                </g>
-              </svg>
-            </div>
-            <div>
-              <div class="pyx-tl-item__date">6.</div>
-              <div class="pyx-tl-item__name">Listo</div>
-              <p class="pyx-tl-item__desc">Ahora puedes empezar a registrar tus vacantes en Tracking o dar de alta personas en las Carpetas.</p>
-            </div>
+          <div class="pyx-tl-item pyx-tl-card">
+            <button class="pyx-tl-card__inner" type="button" aria-label="Ver detalles de Listo">
+              <div class="pyx-tl-card__face pyx-tl-card__face--front">
+                <div class="pyx-tl-item__dot">
+                  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" stroke-linejoin="miter" stroke-linecap="butt">
+                      <path d="M5 23.95L15.2308 37L43 8" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" fill="none"/>
+                    </g>
+                  </svg>
+                </div>
+                <div class="pyx-tl-item__date">6.</div>
+                <div class="pyx-tl-item__name">Listo</div>
+              </div>
+              <div class="pyx-tl-card__face pyx-tl-card__face--back">
+                <div class="pyx-tl-item__name">Listo</div>
+                <p class="pyx-tl-item__desc">Ahora puedes empezar a registrar tus vacantes en Tracking o dar de alta personas en las Carpetas.</p>
+              </div>
+            </button>
           </div>
 
         </div>
@@ -276,8 +315,9 @@
 
       <!-- Columna izquierda: copy -->
       <div class="pyx-form-left">
-        <div class="pyx-section__label">Recomendaciones</div>
-        <h2 class="pyx-section__title">Al realizar tu compra y recibir información sobre tus productos y/o servicios…</h2>
+        <div class="pyx-section__label">Algo a tomar en cuenta</div>
+        <h2 class="pyx-section__title">Recomendaciones</h2>
+        <h3 class="pyx-section__subtitle" style="margin-top:14px;">Al realizar tu compra y recibir información sobre tus productos y/o servicios…</h3>
         <ol class="pyx-ordered-list">
           <li>Revisa y guarda accesos, identifica la URL, así como los datos de ingreso, usuario y contraseña.</li>
           <li>Contamos con un equipo de Consultores expertos(as) en Gestión del Talento, puedes preguntar por nuestros servicios o hacer válidas tus horas de asesoría en caso de haber adquirido.</li>
@@ -289,7 +329,7 @@
       <!-- Columna derecha: imagen -->
       <div class="pyx-hero__image">
         <div class="pyx-hero__image-glow"></div>
-          <img class="pyx-hero__photo" src="assets/img/hero-lerning.png" alt="Consultor de talento digital con interfaz de IA">
+          <img class="pyx-hero__photo pyx-hero__photo--large" src="assets/img/hero-lerning.png" alt="Consultor de talento digital con interfaz de IA">
 
 <!--         <div class="pyx-stat-card pyx-stat-card--left">
           <div class="pyx-stat-card__num">Cursos</div>
@@ -310,7 +350,7 @@
   <!-- ② CALENDARIOS -->
   <section class="pyx-calendars-wrap" id="sesiones">
     <div class="pyx-calendars-inner">
-      <div class="pyx-section__label">Sesiones mes a mes</div>
+      <div class="pyx-section__label">Aprendizaje</div>
       <h2 class="pyx-section__title">Aprendizaje guiado</h2>
       <p class="pyx-section__desc" style="margin-top:14px;">A continuación encontrarás el calendario y el programa de cursos mensuales online.<br></p>
       <p class="pyx-section__desc" style="margin-top:14px;">Registra tu participación o el de tu equipo.</p>
@@ -324,15 +364,15 @@
   <!-- ④ Aprendizaje -->
   <section class="pyx-timeline-wrap" id="aprendizaje">
     <div class="pyx-timeline-inner">
-      <div class="pyx-section__label">Ruta de aprendizaje</div>
+      <div class="pyx-section__label">Aprendizaje</div>
       <h2 class="pyx-section__title">Aprendizaje autónomo</h2>
       <p class="pyx-section__desc" style="margin-top:14px;">Este nuevo módulo está diseñado para brindarte los conocimientos teóricos y técnicos necesarios para usar Pyxoom al 100%.</p>
 
       <div class="pyx-section__label" style="margin-top:3rem;">Beneficios</div>
       <ul class="pyx-ordered-list">
-          <li>Capacitación 24/7.</li>
-          <li>Videos, materiales, guías y rutas de aprendizaje.</li>
-          <li>Más de 100 recursos disponibles.</li>
+          <li class="pyx-ordered-list__item">Capacitación 24/7.</li>
+          <li class="pyx-ordered-list__item">Videos, materiales, guías y rutas de aprendizaje.</li>
+          <li class="pyx-ordered-list__item">Más de 100 recursos disponibles.</li>
       </ul>
 
       <!-- ④ Paso 1 -->
@@ -371,7 +411,7 @@
           </div>
           <p class="pyx-step-copy__text">En esta nueva ventana de lado izquierdo verás un nuevo menú con los diferentes recursos disponibles.</p>
           <ul class="pyx-ordered-list">
-              <li>rutas de aprendizaje.</li>
+              <li>Rutas de aprendizaje.</li>
               <li>Cursos.</li>
               <li>Guías interactivas.</li>
               <li>Documentos.</li>
@@ -443,6 +483,19 @@
 
 <!-- Scripts -->
 <script src="cursos.js" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.pyx-tl-card').forEach((card) => {
+      const button = card.querySelector('.pyx-tl-card__inner');
+      if (!button) return;
+
+      button.addEventListener('click', () => {
+        card.classList.toggle('is-flipped');
+        button.setAttribute('aria-pressed', card.classList.contains('is-flipped'));
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
