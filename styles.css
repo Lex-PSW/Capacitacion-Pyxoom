@@ -759,7 +759,7 @@ html { scroll-behavior:smooth; }
 .pyx-webinar-card__meta { display:flex; flex-direction:column; gap:10px; margin-bottom:28px; }
 .pyx-webinar-card__meta-item {
   display:flex;
-  align-items:center;
+  align-items:top;
   gap:10px;
   font-size:13px;
   color:var(--muted);
@@ -1111,6 +1111,9 @@ html { scroll-behavior:smooth; }
   font-size: 18px;
   text-transform: uppercase;
   margin-bottom: 8px;
+}
+.pyx-tl-item__name--no_uppercase{
+  text-transform: none;
 }
 .pyx-tl-item__desc { font-size:13px; color:var(--muted); line-height:1.6; }
 
