@@ -710,6 +710,7 @@ html { scroll-behavior:smooth; }
 
 .pyx-tooltip__title { font-weight:700; color:var(--white); margin-bottom:4px; font-family:var(--font-head); font-size:13px; letter-spacing:0.02em; }
 .pyx-tooltip__date  { color:#93C5FD; margin-bottom:6px; }
+.pyx-tooltip__desc  { color:var(--muted); font-size:12px; line-height:1.4; margin-bottom:6px; font-weight: 400; }
 .pyx-tooltip__link  { color:var(--electric-lt); text-decoration:underline; cursor:pointer; }
 .pyx-tooltip__link.pyx-btn { text-decoration: none; }
 .pyx-tooltip--past { background: rgba(10,18,44,0.95); border-color: rgba(255,255,255,0.15); }
