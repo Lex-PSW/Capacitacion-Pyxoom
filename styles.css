@@ -589,6 +589,10 @@ html { scroll-behavior: smooth; }
   0%,100% { transform: translateX(-50%) translateY(0); }
   50%      { transform: translateX(-50%) translateY(6px); }
 }
+@keyframes scrollBounceMobile {
+  0%,100% { transform: translateY(0); }
+  50%      { transform: translateY(6px); }
+}
 
 /* =============================================
    SECCIÓN WRAPPER
@@ -1632,7 +1636,8 @@ html { scroll-behavior: smooth; }
 
 @media (max-width: 900px) {
   .pyx-hero__nav    { padding: 20px 24px; }
-  .pyx-hero__body   { grid-template-columns: 1fr; padding: 24px 24px 60px; }
+  .pyx-hero         { min-height: auto; }
+  .pyx-hero__body   { grid-template-columns: 1fr; padding: 24px 24px 40px; }
   .pyx-hero__image  { height: 280px; order: -1; }
   .pyx-hero__image--featured { height: 320px; }
   .pyx-hero__photo  { width: 220px; }
@@ -1641,6 +1646,12 @@ html { scroll-behavior: smooth; }
   .pyx-stat-card--left-V2 { display:none; }
   .pyx-stat-card--right { display:none; }
   .pyx-stat-card--right-V2 { display:none; }
+  .pyx-hero__scroll {
+    position: static;
+    transform: none;
+    margin: 8px auto 32px;
+    animation: scrollBounceMobile 2s ease-in-out infinite;
+  }
   .pyx-section      { padding: 60px 24px; }
   .pyx-form-inner   { grid-template-columns: 1fr; gap:40px; padding:0 24px; }
   .pyx-benefits-inner { grid-template-columns: 1fr; gap:40px; padding:0 24px; }
