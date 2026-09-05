@@ -49,6 +49,20 @@
 <!-- =============== PÁGINA =============== -->
 <div class="pyx-page">
 
+  <!-- NAV FIJO (visible al hacer scroll) -->
+  <nav class="pyx-subnav" id="subnav" aria-label="Navegación de secciones">
+    <button class="pyx-subnav__toggle" id="subnavToggle" type="button" aria-expanded="false" aria-controls="subnavMenu" aria-label="Abrir menú de navegación">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="pyx-subnav__menu" id="subnavMenu">
+      <a href="#quienes-somos" class="pyx-subnav__link">¿Quiénes somos?</a>
+      <a href="#nuevos-usuarios" class="pyx-subnav__link">Nuevos usuarios(as)</a>
+      <a href="#recomendaciones" class="pyx-subnav__link">Recomendaciones</a>
+      <a href="#aprendizaje" class="pyx-subnav__link">Aprendizaje</a>
+      <a href="#contacto" class="pyx-subnav__link">Contáctanos</a>
+    </div>
+  </nav>
+
   <!-- ① HERO -->
   <section class="pyx-hero">
     <nav class="pyx-hero__nav">
@@ -67,7 +81,7 @@
         <div class="pyx-badge">Kit de Bienvenida y Cursos Mensuales</div>
 
         <h1 class="pyx-hero__headline">
-          Todo lo que <em>necesitas</em> saber
+          Primeros pasos <em>en Pyxoom</em>
         </h1>
 
         <p class="pyx-hero__sub">
@@ -79,6 +93,7 @@
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             ¿Quienes somos?
           </a>
+          <!--
           <a href="#nuevos-usuarios" class="pyx-btn pyx-btn--outline">
             Nuevos usuarios(as)
           </a>
@@ -91,6 +106,7 @@
           <a href="#contacto" class="pyx-btn pyx-btn--outline">
             Contáctanos
           </a>
+          -->
         </div>
       </div>
 
@@ -171,7 +187,7 @@
   <section class="pyx-timeline-wrap" id="nuevos-usuarios">
     <div class="pyx-timeline-inner">
       <div class="pyx-section__label">Nuevos usuarios(as)</div>
-      <h2 class="pyx-section__title">¿Qué hacer el primer día con Pyxoom?</h2>
+      <h2 class="pyx-section__title">Sigue los pasos para configurar tu cuenta</h2>
 
       <div class="pyx-timeline pyx-timeline--single-line">
         <div class="pyx-timeline__line"></div>
@@ -317,7 +333,7 @@
       <div class="pyx-form-left">
         <div class="pyx-section__label">Algo a tomar en cuenta</div>
         <h2 class="pyx-section__title">Recomendaciones</h2>
-        <h3 class="pyx-section__subtitle" style="margin-top:14px;">Al realizar tu compra y recibir información sobre tus productos y/o servicios…</h3>
+        <h3 class="pyx-section__subtitle" style="margin-top:14px;">Algunos aspectos a conocer para comenzar tu experiencia y sacar el mayor provecho de la plataforma.</h3>
         <ol class="pyx-ordered-list">
           <li>Revisa y guarda accesos, identifica la URL, así como los datos de ingreso, usuario y contraseña.</li>
           <li>Contamos con un equipo de Consultores expertos(as) en Gestión del Talento, puedes preguntar por nuestros servicios o hacer válidas tus horas de asesoría en caso de haber adquirido.</li>
@@ -366,7 +382,7 @@
     <div class="pyx-timeline-inner">
       <div class="pyx-section__label">Aprendizaje Autónomo</div>
       <h2 class="pyx-section__title">Aprendizaje</h2>
-      <p class="pyx-section__desc" style="margin-top:14px;">Este es un nuevo módulo dentro de Pyxoom y tiene como objetivo brindarte los conocimientos téoricos y técnicos necesarios para capacitarte de forma autónoma al 100%.</p>
+      <p class="pyx-section__desc" style="margin-top:14px;">El módulo Aprendizaje fue diseñado para que desarrolles tus conocimientos de manera autónoma, práctica y flexible. Accede a contenido de gran valor creado por nuestros especialistas y fortalece tus habilidades cuando lo necesites.</p>
 
       <div class="pyx-section__label" style="margin-top:3rem;">Beneficios</div>
       <ul class="pyx-ordered-list">
@@ -495,6 +511,55 @@
         button.setAttribute('aria-pressed', card.classList.contains('is-flipped'));
       });
     });
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const subnav = document.getElementById('subnav');
+    const hero = document.querySelector('.pyx-hero');
+    const toggle = document.getElementById('subnavToggle');
+    const menu = document.getElementById('subnavMenu');
+    if (!subnav || !hero || !toggle || !menu) return;
+
+    const links = menu.querySelectorAll('.pyx-subnav__link');
+    const sectionIds = ['quienes-somos', 'nuevos-usuarios', 'recomendaciones', 'aprendizaje', 'contacto'];
+    const sections = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
+
+    const toggleVisibility = () => {
+      subnav.classList.toggle('is-visible', window.scrollY > hero.offsetHeight * 0.6);
+    };
+    window.addEventListener('scroll', toggleVisibility, { passive: true });
+    toggleVisibility();
+
+    const closeMenu = () => {
+      menu.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    };
+
+    toggle.addEventListener('click', () => {
+      const isOpen = menu.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    links.forEach((link) => link.addEventListener('click', closeMenu));
+
+    document.addEventListener('click', (event) => {
+      if (!subnav.contains(event.target)) closeMenu();
+    });
+
+    const setActive = (id) => {
+      links.forEach((link) => {
+        link.classList.toggle('is-active', link.getAttribute('href') === `#${id}`);
+      });
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) setActive(entry.target.id);
+      });
+    }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
+
+    sections.forEach((section) => observer.observe(section));
   });
 </script>
 
