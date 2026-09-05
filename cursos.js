@@ -412,4 +412,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
   html += buildWebinarCard(getUpcomingSession());
   container.innerHTML = html;
+
+  // Fallback de tap/click para dispositivos táctiles, donde el tooltip por
+  // :hover no siempre se activa de forma confiable.
+  container.addEventListener('click', (event) => {
+    const dayEl = event.target.closest('.pyx-cal-day--session');
+    if (!dayEl) return;
+    if (event.target.closest('.pyx-tooltip, .pyx-tooltips')) return;
+
+    const wasOpen = dayEl.classList.contains('is-open');
+    container.querySelectorAll('.pyx-cal-day--session.is-open').forEach((el) => el.classList.remove('is-open'));
+    if (!wasOpen) dayEl.classList.add('is-open');
+  });
+
+  document.addEventListener('click', (event) => {
+    if (event.target.closest('.pyx-cal-day--session')) return;
+    container.querySelectorAll('.pyx-cal-day--session.is-open').forEach((el) => el.classList.remove('is-open'));
+  });
 });

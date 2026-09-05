@@ -163,6 +163,9 @@ html { scroll-behavior:smooth; }
   color: var(--white);
   overflow-x: hidden;
 }
+.pyx-page strong, .pyx-page b {
+  font-weight: 700;
+}
 
 /* =============================================
    ① HERO
@@ -282,7 +285,7 @@ html { scroll-behavior: smooth; }
 .pyx-subnav__toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
 .pyx-subnav__toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .pyx-subnav {
     justify-content: flex-start;
     padding: 12px 20px;
@@ -420,8 +423,8 @@ html { scroll-behavior: smooth; }
 
 .pyx-hero__sub {
   font-size: 17px;
-  font-weight: 400;
-  color: var(--muted);
+  font-weight: 200;
+  color: var(--white);
   line-height: 1.6;
   margin-bottom: 40px;
   max-width: 480px;
@@ -543,7 +546,7 @@ html { scroll-behavior: smooth; }
 }
 
 .pyx-hero__photo-placeholder svg { opacity: 0.4; }
-.pyx-hero__photo-placeholder p  { font-size:13px; color:var(--muted); text-align:center; }
+.pyx-hero__photo-placeholder p  { font-size:13px; color:var(--white); font-weight:200; text-align:center; }
 
 /* Floating stats */
 .pyx-stat-card {
@@ -633,7 +636,8 @@ html { scroll-behavior: smooth; }
   margin-bottom: 24px;
 }
 .pyx-section__desc {
-  color: var(--muted);
+  color: var(--white);
+  font-weight: 200;
   font-size: 16px;
   line-height: 1.7;
   max-width: 560px;
@@ -823,9 +827,13 @@ html { scroll-behavior: smooth; }
 .pyx-cal-day--session:hover .pyx-tooltips,
 .pyx-cal-day--session .pyx-tooltips:hover { opacity:1; visibility:visible; }
 
+/* show on tap/click (fallback para dispositivos táctiles sin :hover confiable) */
+.pyx-cal-day--session.is-open .pyx-tooltip,
+.pyx-cal-day--session.is-open .pyx-tooltips { opacity:1; visibility:visible; }
+
 .pyx-tooltip__title { font-weight:700; color:var(--white); margin-bottom:4px; font-family:var(--font-head); font-size:13px; letter-spacing:0.02em; }
 .pyx-tooltip__date  { color:#93C5FD; margin-bottom:6px; }
-.pyx-tooltip__desc  { color:var(--muted); font-size:12px; line-height:1.4; margin-bottom:6px; font-weight: 400; }
+.pyx-tooltip__desc  { color:var(--white); font-size:12px; line-height:1.4; margin-bottom:6px; font-weight: 200; }
 .pyx-tooltip__link  { color:var(--electric-lt); text-decoration:underline; cursor:pointer; }
 .pyx-tooltip__link.pyx-btn { text-decoration: none; }
 .pyx-tooltip--past { background: rgba(10,18,44,0.95); border-color: rgba(255,255,255,0.15); }
@@ -908,7 +916,8 @@ html { scroll-behavior: smooth; }
   align-items:top;
   gap:10px;
   font-size:13px;
-  color:var(--muted);
+  color:var(--white);
+  font-weight:200;
 }
 .pyx-webinar-card__meta-item svg { width:16px; height:16px; color:var(--electric-lt); flex-shrink:0; }
 .pyx-webinar-card__meta-item strong { color:var(--white); }
@@ -950,7 +959,8 @@ html { scroll-behavior: smooth; }
   max-width: 420px;
   margin: 0;
   text-align: left;
-  color: var(--muted);
+  color: var(--white);
+  font-weight: 200;
   font-size: 16px;
   line-height: 1.7;
 }
@@ -1127,7 +1137,7 @@ html { scroll-behavior: smooth; }
 }
 .pyx-feature-icon svg { width:18px; height:18px; color:var(--electric-lt); }
 .pyx-feature-text h4 { font-size:14px; font-weight:600; margin-bottom:4px; }
-.pyx-feature-text p  { font-size:13px; color:var(--muted); line-height:1.5; }
+.pyx-feature-text p  { font-size:13px; color:var(--white); font-weight:200; line-height:1.5; }
 
 .pyx-form-box {
   background: rgba(255,255,255,0.03);
@@ -1143,7 +1153,7 @@ html { scroll-behavior: smooth; }
   text-transform: uppercase;
   margin-bottom: 6px;
 }
-.pyx-form-box__subtitle { font-size:13px; color:var(--muted); margin-bottom:32px; }
+.pyx-form-box__subtitle { font-size:13px; color:var(--white); font-weight:200; margin-bottom:32px; }
 
 /* HubSpot form override — los estilos reales del módulo de HubSpot Forms */
 .hs-form fieldset { max-width: 100% !important; }
@@ -1216,11 +1226,201 @@ html { scroll-behavior: smooth; }
 .pyx-success.show { display:block; animation: fadeInUp 0.4s ease; }
 .pyx-success svg { width:48px; height:48px; color:#34D399; margin-bottom:14px; }
 .pyx-success h3 { font-family:var(--font-head); font-weight:800; font-size:22px; text-transform:uppercase; margin-bottom:8px; }
-.pyx-success p   { font-size:14px; color:var(--muted); }
+.pyx-success p   { font-size:14px; color:var(--white); font-weight:200; }
 
 @keyframes fadeInUp {
   from { opacity:0; transform:translateY(16px); }
   to   { opacity:1; transform:translateY(0); }
+}
+
+/* =============================================
+   ⑤ PROGRAMA DE CURSOS (ACORDEÓN)
+   ============================================= */
+.pyx-courses-wrap {
+  padding: 90px 0;
+  background: var(--navy);
+}
+.pyx-courses-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+.pyx-courses-grid {
+  margin-top: 40px;
+}
+@media (min-width: 1025px) {
+  .pyx-courses-grid {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .pyx-courses-outro {
+    max-width: none;
+    text-align: center;
+  }
+}
+.pyx-courses-group {
+  display: block;
+  margin-bottom: 16px;
+  box-shadow: 0 0 0 0.5px var(--electric-lt);
+  padding: 4px 20px 20px;
+}
+.pyx-courses-group__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  padding: 16px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  text-align: left;
+  color: var(--white);
+  font-family: var(--font-body);
+}
+.pyx-courses-group__text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.pyx-courses-group__label {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 21px;
+  color: var(--electric-lt);
+}
+.pyx-courses-group__summary {
+  font-size: 16px;
+  font-weight: 200;
+  color: var(--white);
+  line-height: 1.7;
+}
+.pyx-courses-group__chevron {
+  flex-shrink: 0;
+  color: var(--electric-lt);
+  transition: transform 0.3s ease;
+}
+.pyx-courses-group__header[aria-expanded="true"] .pyx-courses-group__chevron {
+  transform: rotate(90deg);
+}
+.pyx-courses-group__body {
+  display: block;
+  padding-top: 16px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+.pyx-courses-group__body .pyx-course-item {
+  margin-bottom: 20px;
+}
+.pyx-courses-group__body .pyx-course-item:last-child {
+  margin-bottom: 0;
+}
+.pyx-course-item {
+  --course-fade: #0A2966;
+  position: relative;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+.pyx-course-item.is-open {
+  --course-fade: #04276E;
+  background: rgba(37,99,235,0.1);
+  border-color: rgba(37,99,235,0.4);
+}
+.pyx-course-item__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  color: var(--white);
+  font-family: var(--font-body);
+}
+.pyx-course-item__number {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--electric-lt);
+  flex-shrink: 0;
+  width: 28px;
+}
+.pyx-course-item__heading {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.pyx-course-item__title {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.35;
+}
+.pyx-course-item__duration {
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--muted);
+}
+.pyx-course-item__chevron {
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+.pyx-course-item__header[aria-expanded="true"] .pyx-course-item__chevron {
+  transform: rotate(180deg);
+}
+.pyx-course-item__body {
+  position: relative;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.pyx-course-item__body::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 28px;
+  background: linear-gradient(to bottom, transparent, var(--course-fade));
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+.pyx-course-item.is-animating .pyx-course-item__body::after {
+  opacity: 1;
+}
+.pyx-course-item__list {
+  list-style: none;
+  padding: 0 24px 20px 68px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.pyx-course-item__list li {
+  position: relative;
+  font-size: 13px;
+  font-weight: 200;
+  color: var(--white);
+  line-height: 1.5;
+}
+.pyx-course-item__list li::before {
+  content: '';
+  position: absolute;
+  left: -14px;
+  top: 8px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--electric-lt);
 }
 
 /* =============================================
@@ -1335,6 +1535,25 @@ html { scroll-behavior: smooth; }
 }
 .pyx-tl-item__dot svg { width:36px; height:36px; color:var(--white); }
 
+.pyx-tl-card__hint {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.55);
+  animation: pyxCardHintPulse 2.4s ease-in-out infinite;
+}
+.pyx-tl-card__hint svg { width: 16px; height: 16px; }
+
+@keyframes pyxCardHintPulse {
+  0%, 100% { opacity: 0.45; transform: scale(1); }
+  50%      { opacity: 1; transform: scale(1.15); }
+}
+
 .pyx-tl-item__date {
   font-family: var(--font-head);
   font-weight: 800;
@@ -1357,16 +1576,22 @@ html { scroll-behavior: smooth; }
 .pyx-ordered-list li {
   margin-bottom: 12px;
   line-height: 1.7;
-  color: var(--muted);
+  color: var(--white);
+  font-weight: 200;
   padding-left: 1rem;
 }
 
-.pyx-ordered-list a {
+.pyx-text-balance {
+  text-wrap: balance;
+}
+.pyx-ordered-list a,
+.pyx-inline-link {
   color: var(--electric-lt);
   text-decoration: none;
 }
 
-.pyx-ordered-list a:hover {
+.pyx-ordered-list a:hover,
+.pyx-inline-link:hover {
   color: var(--white);
 }
 
@@ -1384,7 +1609,28 @@ html { scroll-behavior: smooth; }
 .pyx-tl-item__name--no_uppercase{
   text-transform: none;
 }
-.pyx-tl-item__desc { font-size:13px; color:var(--muted); line-height:1.6; }
+.pyx-tl-item__desc { font-size:13px; color:var(--white); font-weight:200; line-height:1.6; }
+
+.pyx-title-break {
+  color: var(--electric-lt);
+  display: block;
+}
+
+.pyx-tl-card__face--back .pyx-tl-item__desc {
+  font-family: var(--font-body);
+  font-weight: 300;
+}
+
+@media (min-width: 1024px) {
+  .pyx-tl-card__face--back {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .pyx-timeline--single-line .pyx-tl-card__face--back .pyx-tl-item__desc {
+    margin: 0;
+    max-width: none;
+  }
+}
 
 .pyx-timeline--single-line .pyx-timeline__items {
   grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -1499,7 +1745,8 @@ html { scroll-behavior: smooth; }
   margin: 0;
   font-size: 15px;
   line-height: 1.7;
-  color: var(--muted);
+  color: var(--white);
+  font-weight: 200;
 }
 .pyx-contact-card__list {
   list-style: none;
@@ -1514,7 +1761,8 @@ html { scroll-behavior: smooth; }
   align-items: center;
   gap: 10px;
   font-size: 14px;
-  color: var(--muted);
+  color: var(--white);
+  font-weight: 200;
 }
 .pyx-contact-card__icon {
   width: 16px;
@@ -1595,13 +1843,14 @@ html { scroll-behavior: smooth; }
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
-.pyx-pill__desc { font-size:13px; color:var(--muted); margin-top:2px; }
+.pyx-pill__desc { font-size:13px; color:var(--white); font-weight:200; margin-top:2px; }
 
 .pyx-benefits-copy { max-width: 440px; }
 .pyx-benefits-copy .pyx-section__title { margin-bottom: 20px; }
 .pyx-benefits-copy p {
   font-size: 16px;
-  color: var(--muted);
+  color: var(--white);
+  font-weight: 200;
   line-height: 1.75;
   margin-bottom: 36px;
 }
@@ -1663,6 +1912,7 @@ html { scroll-behavior: smooth; }
   .pyx-footer { flex-direction:column; gap:16px; text-align:center; padding:32px 24px; }
   .pyx-hero__logo { width: 50%; }
   .psw__logo { width: 8%; }
+  .pyx-courses-inner { padding: 0 24px; }
 }
 
 @media (max-width: 640px) {
