@@ -59,6 +59,7 @@
       <a href="#quienes-somos" class="pyx-subnav__link">¿Quiénes somos?</a>
       <a href="#nuevos-usuarios" class="pyx-subnav__link">Nuevos usuarios(as)</a>
       <a href="#recomendaciones" class="pyx-subnav__link">Recomendaciones</a>
+      <a href="#sesiones" class="pyx-subnav__link">Calendario</a>
       <a href="#aprendizaje" class="pyx-subnav__link">Aprendizaje</a>
       <a href="#contacto" class="pyx-subnav__link">Contáctanos</a>
     </div>
@@ -578,7 +579,7 @@
     if (!subnav || !hero || !toggle || !menu) return;
 
     const links = menu.querySelectorAll('.pyx-subnav__link');
-    const sectionIds = ['inicio', 'quienes-somos', 'nuevos-usuarios', 'recomendaciones', 'aprendizaje', 'contacto'];
+    const sectionIds = ['inicio', 'quienes-somos', 'nuevos-usuarios', 'recomendaciones', 'sesiones', 'aprendizaje', 'contacto'];
     const sections = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
 
     const toggleVisibility = () => {
