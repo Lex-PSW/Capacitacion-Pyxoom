@@ -18,7 +18,8 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = join(ROOT, 'hubspot', 'dist');
-const read = (file) => readFileSync(join(ROOT, file), 'utf8');
+// Fines de línea normalizados a LF: git en Windows puede dejar CRLF y cambiaría la salida
+const read = (file) => readFileSync(join(ROOT, file), 'utf8').replace(/\r\n/g, '\n');
 
 // Carpeta del File Manager de HubSpot donde viven imágenes, favicon, CSS y JS
 const HUBFS = 'https://www.pyxoom.com/hubfs/bienvenida-y-cursos-del-mes';
@@ -27,6 +28,13 @@ const HUBFS = 'https://www.pyxoom.com/hubfs/bienvenida-y-cursos-del-mes';
 const GOOGLE_FONTS = 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap';
 
 let html = read('bienvenida-y-cursos-del-mes.html');
+
+// El aviso de mudanza solo aplica a GitHub Pages: se quita completo (estilos, marcado y script)
+html = html.replace(/[ \t]*<!-- gh-pages-aviso:inicio[\s\S]*?<!-- gh-pages-aviso:fin -->\r?\n(?:\r?\n)?/g, '');
+// HubSpot es el sitio oficial: si quedó cualquier rastro del aviso, se detiene el build
+if (/gh-pages-aviso|moveNotice|pyx-move-notice/.test(html)) {
+  throw new Error('El aviso de GitHub Pages no se quitó: revisa los marcadores gh-pages-aviso:inicio / gh-pages-aviso:fin');
+}
 
 const replaceOnce = (pattern, replacement, label) => {
   if (!pattern.test(html)) throw new Error(`No se encontró: ${label}`);
