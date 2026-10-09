@@ -9,7 +9,13 @@
      - bienvenida-y-cursos-del-mes.hubl.html → plantilla de la landing
 
    Para actualizar el calendario del mes basta con editar cursos.js,
-   correr el build y reemplazar bienvenida.js en el File Manager.
+   correr el build y reemplazar bienvenida.js en el File Manager
+   (abrir el archivo → Ver detalles → Reemplazar). La plantilla no cambia.
+
+   Nota de caché: la página carga los archivos desde su propio dominio
+   (contenido.pyxoom.com/hubfs/…, HubSpot reescribe la URL y quita los ?query),
+   y esa copia se actualiza al reemplazar. La de www.pyxoom.com/hubfs/… puede
+   seguir vieja hasta 30 días, pero la página no la usa.
    ============================================= */
 
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
