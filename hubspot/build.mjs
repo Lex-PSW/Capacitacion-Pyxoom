@@ -5,19 +5,20 @@
    Uso:  node hubspot/build.mjs
    Salida (hubspot/dist/):
      - bienvenida.css   → File Manager: bienvenida-y-cursos-del-mes/
-     - bienvenida.js    → File Manager: bienvenida-y-cursos-del-mes/
+     - bienvenida.<hash>.js → File Manager: bienvenida-y-cursos-del-mes/
      - bienvenida-y-cursos-del-mes.hubl.html → plantilla de la landing
 
-   Para actualizar el calendario del mes basta con editar cursos.js,
-   correr el build y reemplazar bienvenida.js en el File Manager
-   (abrir el archivo → Ver detalles → Reemplazar). La plantilla no cambia.
+   Para actualizar el calendario del mes:
+     1. Editar cursos.js y correr el build.
+     2. SUBIR (no reemplazar) el nuevo bienvenida.<hash>.js a la carpeta del File Manager.
+     3. En la plantilla, cambiar el src del <script> al nuevo nombre (solo esa línea).
 
-   Nota de caché: la página carga los archivos desde su propio dominio
-   (contenido.pyxoom.com/hubfs/…, HubSpot reescribe la URL y quita los ?query),
-   y esa copia se actualiza al reemplazar. La de www.pyxoom.com/hubfs/… puede
-   seguir vieja hasta 30 días, pero la página no la usa.
+   Por qué un nombre nuevo por versión: HubSpot sirve los archivos con
+   max-age de 14 días (navegador) y 30 días (CDN). Reemplazar un archivo con el
+   mismo nombre deja a los visitantes recientes viendo el calendario anterior.
    ============================================= */
 
+import { createHash } from 'node:crypto';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -55,6 +56,10 @@ const inlineScripts = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((m
 const js = [read('cursos.js'), read('timeline-auto-flip.js'), ...inlineScripts].join('\n\n');
 html = html.replace(/<script>[\s\S]*?<\/script>\s*/g, '');
 
+// El JS lleva el hash de su contenido en el nombre (bienvenida.<hash>.js): HubSpot pide a los
+// navegadores guardarlo 14 días, así que con el mismo nombre el calendario nuevo no se vería.
+const JS_NAME = `bienvenida.${createHash('sha256').update(js).digest('hex').slice(0, 8)}.js`;
+
 // <head>: SEO, OG y Twitter los genera HubSpot desde la configuración de la página
 replaceOnce(
   /<link rel="stylesheet" href="styles\.css">[\s\S]*?<\/head>/,
@@ -83,7 +88,7 @@ html = html.replaceAll('src="assets/img/', `src="${HUBFS}/`);
 
 replaceOnce(
   /<!-- Scripts -->\s*<script src="cursos\.js" defer><\/script>\s*<script src="timeline-auto-flip\.js" defer><\/script>\s*/,
-  `<script src="${HUBFS}/bienvenida.js" defer></script>\n\n`,
+  `<script src="${HUBFS}/${JS_NAME}" defer></script>\n\n`,
   'scripts cursos.js / timeline-auto-flip.js'
 );
 
@@ -95,7 +100,7 @@ if (leftovers) throw new Error(`Rutas locales sin migrar: ${leftovers.join(', ')
 mkdirSync(DIST, { recursive: true });
 const outputs = {
   'bienvenida.css': css,
-  'bienvenida.js': js,
+  [JS_NAME]: js,
   'bienvenida-y-cursos-del-mes.hubl.html': html,
 };
 for (const [name, content] of Object.entries(outputs)) {
